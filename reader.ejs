@@ -1,8 +1,33 @@
 <% if(type == 'normal') { %>
 
-	<div class="row">
+	<!-- <div class="row haha">
     <embed src="<%= src %>" width="100%" height="550" type="application/pdf">
+	</div> -->
+	<div class="row pdf-viewer-tel" id="pdfViewerTeleport">
+		<style>
+			#viewerContainer {
+				overflow: auto;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.7.570/web/pdf_viewer.css">
+
+		<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.7.570/build/pdf.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.7.570/web/pdf_viewer.js"></script>
+		
+		<div id="viewerContainer">
+			<div id="viewer" class="pdfViewer">
+				loading...
+			</div>
+		</div>
+		<script src="/js/viewer.js"></script>
+		<script>
+			window.embedPDF("<%= src %>")
+		</script>
 	</div>
+
 
 <% } else if (type == 'googledoc'){ %>
 
