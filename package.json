@@ -1,6 +1,6 @@
 {
   "name": "hexo-pdf2html",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A Hexo tag extension which allows you to embed pdf on your posts",
   "main": "index",
   "engines": {
